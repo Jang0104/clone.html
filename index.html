@@ -9,52 +9,69 @@
 </head>
 <!-- https://www.youtube.com/watch?v=Llour2YvsiI&list=RDLlour2YvsiI&start_radio=1 -->
 <style>
+	* {
+		margin: 0;
+		padding: 0;
+	}
+
 	header {
-		position: absolute;
-		height: 56px;
-		width: 100%;
-		;
+		display: flex;
 		align-items: center;
 		justify-content: space-between;
+		padding: 8px 16px;
+		background-color: white;
+		border-bottom: 1px solid #ddd;
+		height: 56px;
 	}
+
+	.left,
+	.bottom,
+	.right {
+		display: flex;
+		align-items: center;
+	}
+
+	.search_box {
+		display: flex;
+	}
+
 </style>
 
 <body>
 	<header>
 		<div class="pc_header">
 			<div class="left">
-				<div>
+				<div class="menu">
 					<i class="fa-thin fa-grip-lines"></i>
 				</div>
 				<h1>
 					Youtube
 				</h1>
 			</div>
-
-
 			<div class="bottom">
 				<div class="search_box">
 					<input type="text" placeholder="jazz playlist">
 					<button>
 						<i class="fa-solid fa-keyboard"></i>
 					</button>
+					<button>
+						<i class="fa-solid fa-microphone"></i>
+					</button>
 				</div>
 			</div>
 
 			<div class="right">
-				<i class="fa-solid fa-microphone"></i>
-			</div>
-			<div>
-				<i class="fa-solid fa-ellipsis-vertical"></i>
-				<div class="login_box">
+				<div>
+					<button>
+						<i class="fa-thin fa-plus"></i>
+						만들기
+					</button>
+					<i class="fa-solid fa-ellipsis-vertical"></i>
 					<input type="text" placeholder="로그인">
 					<i class="fa-thin fa-circle-user"></i>
 				</div>
 			</div>
-
-			<div class="thumbnail">
-				<img src="20" alt="">
-			</div>
+		</div>
 
 		</div>
 		<article class="comment_container">
