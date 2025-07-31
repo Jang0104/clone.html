@@ -10,17 +10,19 @@
 <!-- https://www.youtube.com/watch?v=Llour2YvsiI&list=RDLlour2YvsiI&start_radio=1 -->
 <style>
 	* {
-		margin: 0;
-		padding: 0;
+		box-sizing: border-box;
 	}
 
-	header {
+	body {
+		margin: 0;
+		font-family: Arial, sans-serif;
+	}
+
+	.pc_header {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		padding: 8px 16px;
-		background-color: white;
-		border-bottom: 1px solid #ddd;
+		padding: 0px 16px;
 		height: 56px;
 	}
 
@@ -31,10 +33,107 @@
 		align-items: center;
 	}
 
-	.search_box {
+	.left {
 		display: flex;
+		flex-direction: row;
 	}
 
+	.menu {
+		margin: 0;
+
+	}
+
+	.logo {
+		display: flex;
+		align-items: center;
+		font-weight: bold;
+		font-size: 18px;
+	}
+
+	.logo_icon {
+		width: 32px;
+		height: 24px;
+		background-color: red;
+		border-radius: 4px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-right: 6px;
+	}
+
+	.logo>span {
+		font-size: 11px;
+		color: #555;
+		margin-left: 3px;
+	}
+
+	.center {
+		flex: 1;
+		justify-content: center;
+	}
+
+	.search_box {
+		display: flex;
+		align-items: center;
+	}
+
+	.bar {
+		display: flex;
+		width: 500px;
+		max-width: 100%;
+		border: 1px solid #ccc;
+		border-radius: 40px;
+		overflow: hidden;
+		background-color: white;
+	}
+
+	.bar input {
+		flex: 1;
+		border: none;
+		padding: 8px 14px;
+		outline: none;
+		font-size: 14px;
+	}
+
+	.bar > .keyboard {
+		padding: 0 10px;
+		color: #666;
+		display: flex;
+		align-items: center;
+		border-left: 1px solid #ccc;
+	}
+
+	.search-bar > .search-btn {
+		background-color: #f8f8f8;
+		padding: 0 14px;
+		display: flex;
+		align-items: center;
+		border-left: 1px solid #ccc;
+		cursor: pointer;
+	}
+
+	.mic {
+		background-color: #f1f1f1;
+		border-radius: 50%;
+		width: 40px;
+		height: 40px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-left: 12px;
+		cursor: pointer;
+	}
+
+	.right {
+		gap: 16px;
+	}
+	
+	.profile {
+		width: 32px;
+		height: 32px;
+		background-color: #ddd;
+		border-radius: 50%;
+	}
 </style>
 
 <body>
@@ -44,34 +143,41 @@
 				<div class="menu">
 					<i class="fa-thin fa-grip-lines"></i>
 				</div>
-				<h1>
-					Youtube
-				</h1>
+				<div class="logo">
+					<div class="logo_icon"></div>
+					Premium
+					<span>KR</span>
+				</div>
 			</div>
 			<div class="bottom">
 				<div class="search_box">
-					<input type="text" placeholder="jazz playlist">
-					<button>
-						<i class="fa-solid fa-keyboard"></i>
-					</button>
-					<button>
+					<div class="bar">
+						<input type="text" placeholder="jazz playlist">
+						<div class="keybord">
+							<i class="fa-solid fa-keyboard"></i>
+						</div>
+					</div>
+					<div class="mic">
 						<i class="fa-solid fa-microphone"></i>
-					</button>
+					</div>
 				</div>
 			</div>
 
 			<div class="right">
-				<div>
-					<button>
-						<i class="fa-thin fa-plus"></i>
-						만들기
-					</button>
+				<div class="plus">
+					<i class="fa-thin fa-plus"></i>
 					<i class="fa-solid fa-ellipsis-vertical"></i>
-					<input type="text" placeholder="로그인">
-					<i class="fa-thin fa-circle-user"></i>
+					<div class="profile"></div>
 				</div>
 			</div>
 		</div>
+
+
+
+
+
+
+
 
 		</div>
 		<article class="comment_container">

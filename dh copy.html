@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>YouTube 헤더</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 8px 16px;
+      background-color: white;
+      border-bottom: 1px solid #ddd;
+      height: 56px;
+    }
+
+    .left, .center, .right {
+      display: flex;
+      align-items: center;
+    }
+
+    .left .material-icons {
+      font-size: 28px;
+      cursor: pointer;
+      margin-right: 16px;
+    }
+
+    .logo-box {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo {
+      width: 30px;
+      height: 22px;
+      background-color: #FF0000;
+      border-radius: 4px;
+      position: relative;
+      margin-right: 6px;
+    }
+
+    .logo::before {
+      content: "";
+      position: absolute;
+      top: 4px;
+      left: 10px;
+      width: 0;
+      height: 0;
+      border-top: 6px solid transparent;
+      border-bottom: 6px solid transparent;
+      border-left: 10px solid white;
+    }
+
+    .brand {
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    .center {
+      flex: 1;
+      justify-content: center;
+    }
+
+    .search-box {
+      display: flex;
+      align-items: center;
+      border: 1px solid #ccc;
+      border-radius: 40px;
+      overflow: hidden;
+      width: 100%;
+      max-width: 600px;
+      background-color: #f9f9f9;
+    }
+
+    .search-box input {
+      border: none;
+      padding: 8px 12px;
+      outline: none;
+      flex: 1;
+      background: transparent;
+    }
+
+    .search-box button {
+      background: none;
+      border: none;
+      padding: 8px 12px;
+      font-size: 20px;
+      cursor: pointer;
+    }
+
+    .right .material-icons {
+      font-size: 24px;
+      margin-left: 16px;
+      cursor: pointer;
+    }
+
+    .make-btn {
+      background-color: #f2f2f2;
+      border: none;
+      padding: 6px 12px;
+      border-radius: 20px;
+      margin-left: 16px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <!-- 왼쪽 -->
+    <div class="left">
+      <span class="material-icons">menu</span>
+      <div class="logo-box">
+        <div class="logo"></div>
+        <span class="brand">Premium<sup style="font-size:10px; margin-left: 2px;">KR</sup></span>
+      </div>
+    </div>
+
+    <!-- 중앙 -->
+    <div class="center">
+      <div class="search-box">
+        <input type="text" placeholder="검색" />
+        <button title="키보드">
+          <span class="material-icons">keyboard</span>
+        </button>
+        <button title="검색">
+          <span class="material-icons">search</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- 오른쪽 -->
+    <div class="right">
+      <span class="material-icons" title="음성 검색">mic</span>
+      <button class="make-btn">＋ 만들기</button>
+      <span class="material-icons" title="알림">notifications</span>
+      <span class="material-icons" title="프로필">account_circle</span>
+    </div>
+  </div>
+
+</body>
+</html>
